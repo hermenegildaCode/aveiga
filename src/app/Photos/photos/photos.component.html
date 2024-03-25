@@ -1,0 +1,12 @@
+<h1 class="gallery">
+  Galería de imágenes
+</h1>
+<div>
+  <ul>
+    <li *ngFor="let img of (allImages)">
+      <a [routerLink]="['/image', img.id]">
+        <img src="{{img.url}}" class="img" width="240" height="170">
+      </a>
+    </li>
+  </ul>
+</div>
