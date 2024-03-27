@@ -15,6 +15,7 @@ import { FooterComponent } from './Footer/footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ImageDetailComponent } from './Photos/image-detail/image-detail.component';
 import { ImageService } from './Photos/photos/images.service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ImageService } from './Photos/photos/images.service';
     PhotosComponent,
     PoemsComponent,
     FooterComponent,
-    ImageDetailComponent
+    ImageDetailComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

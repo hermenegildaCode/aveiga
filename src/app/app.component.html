@@ -1,34 +1,5 @@
-<!--mat-toolbar-- class="toolbar-outer">
-  <button mat-icon-button *ngIf="isScreenSmall()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>{{ title }}</span>
-
-    <mat-nav-list fxLayout="row" class="horizontal-list custom-ml-sm">
-      <a mat-list-item [routerLink]="['/']" routerLinkActive="active-link">
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
-      </a>
-      <a mat-list-item [routerLink]="['/photos']" routerLinkActive="active-link">
-        <mat-icon>photo_library</mat-icon>
-        <span>Photos</span>
-      </a>
-      <a mat-list-item [routerLink]="['/memoirs']" routerLinkActive="active-link">
-        <mat-icon>description</mat-icon>
-        <span>Memoirs</span>
-      </a>
-      <a mat-list-item [routerLink]="['/poems']" routerLinkActive="active-link" class="justify-center">
-        <mat-icon>library_books</mat-icon>
-        <!--span class="white-text">Poems</!--span-->
-        <!--<span>Poems</span>
-      </a>
-    </mat-nav-list>
-  </mat-toolbar>-->
   <mat-toolbar color="primary">
-    <button mat-icon-button *ngIf="isScreenSmall()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>{{ title }}</span>
+    <span>{{ title}}</span>
   <nav mat-tab-nav-bar>
        <a mat-tab-link *ngFor="let link of links; index as i"
        (click)="handleLinkClick(link)"
@@ -36,5 +7,15 @@
        > {{titles[i]}} </a>
   </nav>
 </mat-toolbar>
-<footer></footer>
+<mat-sidenav-container>
+   <!-- <mat-sidenav #sidenavRef role="navigation"> -->
+    <!-- <navbar (sidenavClose)="sidenavRef.close()"></navbar> -->
+    <navbar></navbar>
+  <!-- </mat-sidenav> -->
+  <!-- <mat-sidenav-content> -->
+    <!-- <app-header (sidenavToggle)="sidenavRef.toggle()"></app-header> -->
+  <!-- </mat-sidenav-content> -->
+</mat-sidenav-container>
+
 <router-outlet></router-outlet>
+<footer></footer>
