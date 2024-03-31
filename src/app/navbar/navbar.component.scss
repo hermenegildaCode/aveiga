@@ -14,8 +14,25 @@ a{
   text-decoration: none;
   color: white;
 }
+
+nav, mat-nav-list, .mat-nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: white;
+}
+
 .nav-caption{
-  padding-left: 6px;
+  // padding-left: 6px;
+  min-width: 60px;
+}
+
+nav a{
+  align-self: center;
+  margin-left: 20px;
+  * {
+    color: white;
+  }
 }
 
 a:hover, a:active{
@@ -26,32 +43,34 @@ mat-list-item > *, .mat-list-item > *{
   display: flex;
   flex-direction: row;
   align-self: center;
-}
-mat-nav-list, .mat-nav-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  color: white;
 }
 .flex, mat-nav-list > span > span {
   display: flex;
+  .mat-icon, mat-icon {
+    min-width:25px;
+  }
 }
-// mat-icon, .mat-icon {
-
+mat-icon, .mat-icon {
+  margin-top: 3px;
   // margin-top: 10px;
   // padding-top: 10px;
-// }
+}
 .mat-mdc-list-item-unscoped-content {
   display: flex;
 }
 @media screen and (min-width: 200px) and (max-width: 767px) {
-  mat-nav-list, .mat-nav-list {
+  nav, mat-nav-list, .mat-nav-list {
+    display: flex;
     height: 100%;
-    flex-direction: column;
+    // flex-direction: column;
+    flex-direction: row;
   }
-  .nav-caption{
+  .nav-caption {
     // display: inline-block;
     // margin-bottom: 10px;
     // padding-bottom: 10px;
-    padding-left: 6px;
+    // padding-left: 6px;
+    display: none;
   }
 }

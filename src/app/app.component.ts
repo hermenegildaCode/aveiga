@@ -15,18 +15,4 @@ export class AppComponent {
     private titleService:Title) {
   this.titleService.setTitle("A. Veiga");
   }
-
-handleLinkClick(link: string) {
-  this.activeLink = link;
-  this.router.navigate([link]); // Navigate to the specified link
-}
-  title = 'A. Veiga';
-  isScreenSmall(): boolean {
-    console.log(window.innerWidth);
-    return window.innerWidth < 500;
-  }
-  links = ['home', 'memoirs', 'photos', 'poems'];
-  titles = ['Inicio', 'Memorias', 'Galería', 'Poemas'];
-  activeLink = this.links[1];
-
 }

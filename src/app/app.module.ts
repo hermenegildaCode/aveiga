@@ -16,6 +16,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ImageDetailComponent } from './Photos/image-detail/image-detail.component';
 import { ImageService } from './Photos/photos/images.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatDividerModule
   ],
   providers: [ImageService],
   bootstrap: [AppComponent]

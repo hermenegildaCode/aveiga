@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'navbar',
@@ -6,11 +7,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @Output() sidenavClose = new EventEmitter();
-  constructor() { }
+  // @Output() sidenavClose = new EventEmitter();
+  constructor(private router: Router ) { }
   ngOnInit() {
   }
-  public onSidenavClose = () => {
-    this.sidenavClose.emit();
-  }
+  // public onSidenavClose = () => {
+  //   this.sidenavClose.emit();
+  // }
 }

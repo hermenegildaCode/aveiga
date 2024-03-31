@@ -19,5 +19,10 @@ const galleryImages = [
   { "id": 4, "url": "assets/f4.jpg" },
   { "id": 5, "url": "assets/f5.jpg" },
   { "id": 6, "url": "assets/f6.jpg" },
-  { "id": 7, "url": "assets/f7.jpg" }
+  { "id": 7, "url": "assets/f7.jpg" },
+  { "id": 8, "url": "assets/f8.jpg" },
+  { "id": 9, "url": "assets/f9.jpg" },
+  { "id": 10, "url": "assets/f10.jpg" },
+  { "id": 11, "url": "assets/f11.jpg" },
+  { "id": 12, "url": "assets/f12.jpg" }
 ]
