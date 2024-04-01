@@ -17,6 +17,7 @@ import { ImageDetailComponent } from './Photos/image-detail/image-detail.compone
 import { ImageService } from './Photos/photos/images.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCardModule,
   ],
   providers: [ImageService],
   bootstrap: [AppComponent]

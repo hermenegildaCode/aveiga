@@ -1,8 +1,16 @@
-#header-img, .header-img {
-  max-width: 30%;
-  max-height: auto;
-}
 .component-body {
-  margin-top: 50px;
-  margin-left: 50px;
+  margin: 50px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  #header-img, .header-img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px){
+  #header-img, .header-img {
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
 }

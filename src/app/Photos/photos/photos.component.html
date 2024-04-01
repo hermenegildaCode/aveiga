@@ -1,12 +1,15 @@
-<h1 class="gallery">
+<h1 class="gallery-title">
   Galería de imágenes
 </h1>
-<div>
-  <ul>
-    <li *ngFor="let img of (allImages)">
-      <a [routerLink]="['/image', img.id]">
-        <img src="{{img.url}}" class="img" width="240" height="170">
+<div class="gallery">
+  <div  *ngFor="let img of (allImages)">
+    <mat-card class="mat-card">
+        <a [routerLink]="['/image', img.id]">
+          <img mat-card-image src="{{img.url}}" class="img">
       </a>
-    </li>
-  </ul>
+        <mat-card-content>
+          {{img.caption}}
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

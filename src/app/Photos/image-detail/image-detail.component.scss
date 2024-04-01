@@ -1,12 +1,46 @@
-.img-container {
-  margin: 13px;
-  -webkit-filter: drop-shadow( -5px 5px 5px #000 );
-  filter: drop-shadow( -5px 5px 5px #000 );
-  min-height: 600px;
-  min-width: 800px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 30px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  .img-container {
+    margin: 13px;
+    -webkit-filter: drop-shadow( -5px 5px 5px #000 );
+    filter: drop-shadow( -5px 5px 5px #000 );
+    background-size: contain;
+    background-position: center;
+    min-width: 300px;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    &:hover {
+      color: alpha($color: #ffe6e6);
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  .img-container {
+    margin: 13px;
+    -webkit-filter: drop-shadow( -5px 5px 5px #000 );
+    filter: drop-shadow( -5px 5px 5px #000 );
+    min-height: 600px;
+    min-width: 800px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    &:hover {
+      color: alpha($color: #ffe6e6);
+    }
+  }
 }
 img.img {
   width: 500px;
@@ -16,4 +50,28 @@ img.img {
   max-width: 800px;
   max-height: auto;
   box-shadow: rgb(211, 31, 31) 1px 2px 8px 1px;
+}
+.prev-img, .next-img {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+}
+.arrow-container  {
+  min-width: 50px;
+  min-height: 50px;
+  cursor: pointer;
+
+  mat-icon, .mat-icon {
+    font-size: 45px;
+    height: 45px;
+    width: 45px;
+
+  }
+}
+mat-icon:hover, mat-icon:active .mat-icon:hover, .mat-icon:active {
+    color: rgba(115, 79, 179, 0.83);
+}
+.arrow-container:hover {
+  background-color:rgba(238, 238, 238, 0.715)
 }

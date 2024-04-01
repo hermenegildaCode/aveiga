@@ -7,11 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  // @Output() sidenavClose = new EventEmitter();
   constructor(private router: Router ) { }
   ngOnInit() {
   }
-  // public onSidenavClose = () => {
-  //   this.sidenavClose.emit();
-  // }
 }
