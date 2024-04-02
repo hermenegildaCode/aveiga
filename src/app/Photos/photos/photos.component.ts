@@ -27,7 +27,6 @@ export class PhotosComponent {
 
   constructor(private imageService: ImageService,private router: Router) {
     this.allImages = this.imageService.getImages();
-    console.log('this.allImages',this.allImages);
   }
   ngOnChanges() {
     this.allImages = this.imageService.getImages();

@@ -18,6 +18,17 @@ import { ImageService } from './Photos/photos/images.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCtajUYGjxKwB9E8L4h6zXIo2B1eVNuGXU",
+  authDomain: "ave1ga.firebaseapp.com",
+  projectId: "ave1ga",
+  storageBucket: "ave1ga.appspot.com",
+  messagingSenderId: "100800842961",
+  appId: "1:100800842961:web:79df623c9d792e00b749f0"
+};
+const app = initializeApp(firebaseConfig);
 
 @NgModule({
   declarations: [

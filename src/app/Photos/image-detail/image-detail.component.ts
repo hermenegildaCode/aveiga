@@ -21,6 +21,12 @@ export class ImageDetailComponent {
       this.route.snapshot.params['id']
     );
   }
+  isLastImage(): boolean {
+   return (Number(this.image.id) === Number(this.imageService.getImages().length-1));
+  }
+  isFirstImage(): boolean {
+    return this.image.id === 0;
+  }
   goToPrevImg() {
     if (this.image.id > 0) {
       this.image = this.imageService.getImage(this.image.id-1);
@@ -28,9 +34,7 @@ export class ImageDetailComponent {
     }
   }
   goToNextImg() {
-    console.log('this.image', this.image);
     if (this.image.id < this.imageService.getImages().length - 1) {
-      console.log('this.imageService.getImages().length', this.imageService.getImages().length);
       this.image = this.imageService.getImage(this.image.id+1);
        this.router.navigate(['/photos' + this.image.id]);
     }

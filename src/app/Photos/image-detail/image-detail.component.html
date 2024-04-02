@@ -1,13 +1,27 @@
-<div class="arrow-container column">
-<a class="back-arrow" routerLink="/photos" color="primary">
-    <mat-icon>arrow_back</mat-icon>
-</a>
-</div>
-<div class="row">
-  <div class="arrow-container prev-img" (mouseover)="hoverLeft=true" (mouseleave)="hoverLeft=false" (click)="goToPrevImg()">
-    <mat-icon [ngStyle]="{'color' : hoverLeft ? 'rgba(115, 79, 179, 0.83)' : '#673ab7'}">keyboard_arrow_left</mat-icon></div>
-  <div [ngStyle]="{'background-image':'url('+ image.url +')'}" class="img-container" [@slideInLeft] >
+<div class="picture-container">
+    <div class="arrow-container back">
+      <a class="back-arrow" routerLink="/photos" color="primary">
+          <mat-icon>arrow_back</mat-icon>
+      </a>
     </div>
-    <div class="arrow-container next-img" (mouseover)="hoverRight=true" (mouseleave)="hoverRight=false" (click)="goToNextImg()">
-      <mat-icon  [ngStyle]="{'color' : hoverRight ? 'rgba(115, 79, 179, 0.83)' : '#673ab7'}">keyboard_arrow_right</mat-icon></div>
+
+<mat-card class="mat-card">
+  <div class="row">
+    <div class="arrow-container prev-img" (mouseover)="hoverLeft=true" (mouseleave)="hoverLeft=false" (click)="goToPrevImg()"
+    [ngStyle]="{'color' : (hoverLeft && !isFirstImage()) ? 'rgba(238, 238, 238, 0.715)' : 'inherit',
+    'cursor': (hoverLeft && !isFirstImage()) ? 'pointer' : 'default'}">
+      <mat-icon [ngStyle]="{'color' : hoverLeft ? 'rgba(115, 79, 179, 0.83)' : '#673ab7', 'display':  isFirstImage() ? 'None' : 'unset'}">keyboard_arrow_left</mat-icon>
+    </div>
+    <div [ngStyle]="{'background-image':'url('+ image.url +')'}" class="img-container" [@slideInLeft] ></div>
+    <div class="arrow-container next-img" (mouseover)="hoverRight=true" (mouseleave)="hoverRight=false" (click)="goToNextImg()"
+    [ngStyle]="{'color' : (hoverRight && !isLastImage()) ? 'rgba(238, 238, 238, 0.715)' : 'inherit',
+    'display':  isLastImage() ? 'None' : 'unset',
+    'cursor': isLastImage() ? 'default' : hoverRight ? 'pointer' : 'default'}">
+      <mat-icon  [ngStyle]="{'color' : (hoverRight && !isLastImage()) ? 'rgba(115, 79, 179, 0.83)' : '#673ab7'}">keyboard_arrow_right</mat-icon>
+    </div>
+  </div>
+  <mat-card-content>
+    {{image.caption}}
+  </mat-card-content>
+</mat-card>
 </div>

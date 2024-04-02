@@ -5,21 +5,20 @@
   max-width: 350px;
   max-height: 250px;
   cursor: pointer
-     }
- ul { padding:0; width:1200px; margin:20px auto;margin-left: 80px}
- li { display:inline;}
+}
+ul { padding:0; width:1200px; margin:20px auto;margin-left: 80px}
+li { display:inline;}
 h1.gallery-title {
-  margin-top: 30px;
-  margin-left: 20px;
+  margin-top: 80px;
+  margin-left: 30px;
 }
 .gallery {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  margin: 0px 30px 30px 30px;
 }
 .mat-card {
-  // max-width: 400px;
-  // max-height: 350px;
   text-align: center;
   padding-top: 20px;
   margin-right: 25px;
