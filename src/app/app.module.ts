@@ -19,7 +19,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import { initializeApp } from "firebase/app";
-
+/*
 const firebaseConfig = {
   apiKey: "AIzaSyCtajUYGjxKwB9E8L4h6zXIo2B1eVNuGXU",
   authDomain: "ave1ga.firebaseapp.com",
@@ -27,7 +27,16 @@ const firebaseConfig = {
   storageBucket: "ave1ga.appspot.com",
   messagingSenderId: "100800842961",
   appId: "1:100800842961:web:79df623c9d792e00b749f0"
+};*/
+const firebaseConfig = {
+  apiKey: "AIzaSyDKb9NXsGqG5p3QrBRa_i4KkRTgxwAK8GQ",
+  authDomain: "aveiga.firebaseapp.com",
+  projectId: "aveiga",
+  storageBucket: "aveiga.appspot.com",
+  messagingSenderId: "1087803899460",
+  appId: "1:1087803899460:web:69ffeac97686628e264611"
 };
+
 const app = initializeApp(firebaseConfig);
 
 @NgModule({
